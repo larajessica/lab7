@@ -6,10 +6,12 @@ var projects = require('../projects.json');
 
 exports.view = function(request, response){
 	projects['viewAlt'] = false;
+	console.log(projects);
   	response.render('index', projects);
 };
 
 exports.viewAlt = function(request, response){
 	projects['viewAlt'] = true;
+	console.log(projects);
 	response.render('index', projects)
 };
